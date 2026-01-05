@@ -101,7 +101,7 @@ const Invitation = () => {
   return (
     <div className="min-h-screen bg-wedding-cream text-stone-800 pb-24 font-sans selection:bg-wedding-gold selection:text-white">
         {/* Hidden Audio Element - employing a placeholder generic wedding track or asking user to provide */}
-        <audio ref={audioRef} loop src="https://assets.mixkit.co/music/preview/mixkit-wedding-bells-colors-558.mp3" />
+        <audio ref={audioRef} loop src="/music.mp3" />
 
         {/* Floating Music Control */}
         <button 
@@ -252,7 +252,7 @@ const Invitation = () => {
 
                     <motion.div variants={fadeInUp} className="mt-10">
                         <a 
-                            href="https://goo.gl/maps/YOUR_LINK_HERE" 
+                            href="https://maps.app.goo.gl/uP1AaFjQFC9TzQAX7" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-8 py-3 bg-wedding-olive text-white rounded-full hover:bg-stone-700 transition-colors uppercase tracking-widest text-xs font-medium"

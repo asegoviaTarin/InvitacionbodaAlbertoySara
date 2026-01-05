@@ -6,6 +6,7 @@ import Invitation from './components/Invitation';
 function App() {
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false);
   const [showInvitation, setShowInvitation] = useState(false);
+  const guestNames = new URLSearchParams(window.location.search).get('names');
 
   const handleOpenEnvelope = () => {
     setIsEnvelopeOpen(true);
@@ -25,7 +26,7 @@ function App() {
             transition={{ duration: 1 }}
             className="z-50"
           >
-            <Envelope isOpen={isEnvelopeOpen} onOpen={handleOpenEnvelope} />
+            <Envelope isOpen={isEnvelopeOpen} onOpen={handleOpenEnvelope} guestNames={guestNames} />
           </motion.div>
         )}
       </AnimatePresence>

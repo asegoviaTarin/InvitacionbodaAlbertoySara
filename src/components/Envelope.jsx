@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const Envelope = ({ isOpen, onOpen }) => {
+const Envelope = ({ isOpen, onOpen, guestNames }) => {
   return (
     <div className="relative w-full h-screen flex items-center justify-center bg-wedding-cream overflow-hidden">
       <motion.div
@@ -14,11 +14,20 @@ const Envelope = ({ isOpen, onOpen }) => {
         }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
       >
-        <img 
-            src="/envelope-cover.jpg" 
-            alt="Sobre de Invitación" 
-            className="max-w-sm w-full h-auto object-cover scale-[1.03]"
-        />
+        <div className="relative">
+             <img 
+                src="/envelope-cover.jpg" 
+                alt="Sobre de Invitación" 
+                className="max-w-sm w-full h-auto object-cover scale-[1.03]"
+            />
+            {guestNames && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center pb-12 z-10">
+                    <span className="font-serif italic text-2xl md:text-3xl text-stone-700 bg-white/40 backdrop-blur-sm px-6 py-2 rounded-full shadow-sm">
+                        {guestNames}
+                    </span>
+                </div>
+            )}
+        </div>
         
         {/* Pulse Hint */}
         {!isOpen && (
