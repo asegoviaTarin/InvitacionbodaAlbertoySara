@@ -410,9 +410,7 @@ const Invitation = () => {
              </div>
         </section>
 
-        <footer className="text-center py-12 text-stone-400 text-sm pb-32">
-            <p>Hecho con ❤️ para Alberto & Sara</p>
-        </footer>
+
         </div> {/* End Content Container */}
 
 
