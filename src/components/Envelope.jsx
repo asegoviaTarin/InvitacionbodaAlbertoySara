@@ -1,0 +1,38 @@
+import { motion } from 'framer-motion';
+
+const Envelope = ({ isOpen, onOpen }) => {
+  return (
+    <div className="relative w-full h-screen flex items-center justify-center bg-wedding-cream overflow-hidden">
+      <motion.div
+        className="relative z-50 cursor-pointer shadow-2xl rounded-xl overflow-hidden"
+        onClick={!isOpen ? onOpen : undefined}
+        initial={{ scale: 1, opacity: 1 }}
+        animate={{ 
+          y: isOpen ? -100 : 0,
+          opacity: isOpen ? 0 : 1,
+          pointerEvents: isOpen ? 'none' : 'auto'
+        }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+      >
+        <img 
+            src="/envelope-cover.jpg" 
+            alt="Sobre de Invitación" 
+            className="max-w-sm w-full h-auto object-cover scale-[1.03]"
+        />
+        
+        {/* Pulse Hint */}
+        {!isOpen && (
+            <motion.div
+                className="absolute bottom-10 left-0 right-0 text-center text-stone-600 font-serif tracking-widest text-sm"
+                animate={{ opacity: [0.5, 1, 0.5] }}
+                transition={{ repeat: Infinity, duration: 2 }}
+            >
+                (Toca para abrir)
+            </motion.div>
+        )}
+      </motion.div>
+    </div>
+  );
+};
+
+export default Envelope;
