@@ -21,7 +21,7 @@ const Envelope = ({ isOpen, onOpen, guestNames }) => {
                 className="max-w-sm w-full h-auto object-cover scale-[1.03]"
             />
             {guestNames && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center pb-12 z-10">
+                <div className="absolute inset-0 flex flex-col items-center justify-end pb-32 z-10">
                     <span className="font-serif italic text-2xl md:text-3xl text-stone-700 bg-white/40 backdrop-blur-sm px-6 py-2 rounded-full shadow-sm">
                         {guestNames}
                     </span>
