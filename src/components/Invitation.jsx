@@ -244,7 +244,7 @@ const Invitation = () => {
                         className="w-full relative rounded-xl overflow-hidden shadow-sm mt-10 aspect-[16/9]"
                     >
                         <img 
-                            src="/location-venue.png" 
+                            src="/location-venue.jpg" 
                             alt="Vista aérea de la Finca" 
                             className="w-full h-full object-cover"
                         />
